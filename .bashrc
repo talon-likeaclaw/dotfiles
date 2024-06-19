@@ -1,4 +1,6 @@
 export PATH="$PATH:$HOME/Documents/Coding/Bash/bin/:$HOME/.local/bin"
+GITEA_PATH='/home/talon/repos/personal-repos/gitea/'
+GITHUB_PATH='/home/talon/repos/personal-repos/github/'
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
