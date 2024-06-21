@@ -1,4 +1,5 @@
 export PATH="$PATH:$HOME/Documents/Coding/Bash/bin/:$HOME/.local/bin"
+eval "$(zoxide init bash)"
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -120,7 +121,7 @@ alias c='clear'
 alias ls='eza -l --color=always --group-directories-first'
 alias cat='batcat -p'
 alias can='batcat'
-eval "$(zoxide init bash)"
 alias lg='lazygit'
-alias n='neofetch'
+alias n='clear ; neofetch'
 alias jinit='mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false'
+alias ts='tmux ls'
