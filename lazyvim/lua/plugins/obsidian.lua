@@ -31,7 +31,6 @@ return {
         path = "~/obsidian/talon-codes/",
       },
     },
-
     completion = {
       -- Set to false to disable completion.
       nvim_cmp = true,
@@ -40,17 +39,14 @@ return {
     },
 
     note_id_func = function(title)
-      local date_prefix = os.date("%Y-%m-%d")
-      if title ~= nil then
-        local processed_title = title:gsub(" ", "-"):gsub("[^a-za-z0-9-]", ""):lower()
-        return date_prefix .. "-" .. processed_title
-      else
-        -- fallback to timestamp
-        return os.date("%y%m%d%h%m%s")
-      end
+      return title
     end,
 
     note_frontmatter_func = function(note)
+      local function format_time(timestamp)
+        return os.date("%A, %B %d, %Y, %I:%M:%S %p", timestamp)
+      end
+
       -- Add the title of the note as an alias.
       if note.title then
         note:add_alias(note.title)
@@ -58,8 +54,6 @@ return {
 
       -- Initialize the frontmatter with the specified fields.
       local out = {
-        date = os.date("%Y-%m-%d"),
-        id = note.id,
         aliases = note.aliases,
         tags = note.tags or {},
         hubs = {},
@@ -71,6 +65,19 @@ return {
         for k, v in pairs(note.metadata) do
           out[k] = v
         end
+      end
+
+      -- Add date created and date modified fields.
+      if note.created_time then
+        out["date created"] = format_time(note.created_time)
+      else
+        out["date created"] = format_time(os.time()) -- Use current time if created_time is not available
+      end
+
+      if note.modified_time then
+        out["date modified"] = format_time(note.modified_time)
+      else
+        out["date modified"] = format_time(os.time()) -- Use current time if modified_time is not available
       end
 
       return out

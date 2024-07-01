@@ -116,6 +116,7 @@ if ! shopt -oq posix; then
 		. /etc/bash_completion
 	fi
 fi
+clear
 neofetch
 alias c='clear'
 alias ls='eza -l --color=always --group-directories-first'
@@ -125,3 +126,4 @@ alias lg='lazygit'
 alias n='clear ; neofetch'
 alias jinit='mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false'
 alias ts='tmux ls'
+alias music='psql -h 192.168.0.140 -U talon-likeaclaw -d music_db'
