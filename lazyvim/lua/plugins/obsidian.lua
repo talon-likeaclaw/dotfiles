@@ -27,8 +27,8 @@ return {
   opts = {
     workspaces = {
       {
-        name = "talon-codes",
-        path = "~/obsidian/talon-codes/",
+        name = "talons-brain",
+        path = "~/obsidian/talons-brain",
       },
     },
     completion = {
@@ -68,12 +68,17 @@ return {
       end
 
       -- Add date created and date modified fields.
-      if note.created_time then
-        out["date created"] = format_time(note.created_time)
+      if note.metadata and note.metadata["date created"] then
+        out["date created"] = note.metadata["date created"]
       else
-        out["date created"] = format_time(os.time()) -- Use current time if created_time is not available
+        if note.created_time then
+          out["date created"] = format_time(note.created_time)
+        else
+          out["date created"] = format_time(os.time()) -- Use current time if created_time is not available
+        end
       end
 
+      -- Add date modified field.
       if note.modified_time then
         out["date modified"] = format_time(note.modified_time)
       else
