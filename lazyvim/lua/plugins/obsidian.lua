@@ -21,6 +21,8 @@ return {
     { "<leader>os", ":ObsidianSearch<cr>", desc = "obsidian [s]earch" },
     { "<leader>oo", ":ObsidianQuickSwitch<cr>", desc = "obsidian [o]pen quickswitch" },
     { "<leader>oO", ":ObsidianOpen<cr>", desc = "obsidian [O]pen in app" },
+    { "<leader>ok", ":!mv '%:p' /home/talon/obsidian/talons-brain/zettelkasten/", desc = "[o]bsidian [k]eep file" },
+    { "<leader>odd", ":!rm '%:p'<cr>:bd<cr>", desc = "[o]bsi[d]ian [d]elete" },
   },
 
   -- Custom options begin here:
