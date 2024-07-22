@@ -1,1 +1,1 @@
-require("cheovim")
+require("talonvim.core")
