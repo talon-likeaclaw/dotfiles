@@ -30,7 +30,7 @@ return {
     workspaces = {
       {
         name = 'talons-brain',
-        path = '~/obsidian/talons-brain',
+        path = '~/Documents/Obsidian/talons-brain',
       },
     },
     completion = {
