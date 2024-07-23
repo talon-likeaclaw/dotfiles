@@ -21,13 +21,12 @@ return {
         timeout_ms = 1000,
       },
     }
-
-    vim.keymap.set({ 'n', 'v' }, '<leader>Fm', function()
+    vim.keymap.set({ 'n', 'v' }, '<leader>cf', function()
       conform.format {
         lsp_fallback = true,
         async = false,
         timeout_ms = 1000,
       }
-    end, { desc = 'Format Manually' })
+    end, { desc = 'format' })
   end,
 }

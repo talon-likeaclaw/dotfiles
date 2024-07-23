@@ -33,6 +33,6 @@ return { -- Fuzzy Finder (files, lsp, etc)
         winblend = 10,
         previewer = false,
       })
-    end, { desc = '[/] search in current buffer' })
+    end, { desc = 'search in current buffer' })
   end,
 }
