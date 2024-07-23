@@ -120,8 +120,8 @@ clear
 neofetch
 alias c='clear'
 alias ls='eza -l --color=always --group-directories-first'
-alias cat='batcat -p'
-alias can='batcat'
+alias cat='bat -p'
+alias can='bat'
 alias lg='lazygit'
 alias n='clear ; neofetch'
 alias jinit='mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false'
