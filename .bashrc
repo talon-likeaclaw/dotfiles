@@ -129,3 +129,4 @@ alias ts='tmux ls'
 alias music='psql -h 192.168.0.140 -U talon-likeaclaw -d music_db'
 alias or='nvim ~/Documents/Obsidian/talons-brain/inbox/*.md'
 alias tc="tmux a -t"
+alias size="du -sh"
