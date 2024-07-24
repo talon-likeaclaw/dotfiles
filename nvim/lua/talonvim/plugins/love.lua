@@ -4,7 +4,7 @@ return {
   cmd = 'LoveRun',
   opts = {
     path_to_love_bin = '/Applications/love.app/Contents/MacOS/love',
-    path_to_love_library = '/Users/talon/coding/lua/libraries/love2d/library/',
+    path_to_love_library = '~/coding/lua/libraries/love2d/library',
     restart_on_save = false,
   },
   keys = {

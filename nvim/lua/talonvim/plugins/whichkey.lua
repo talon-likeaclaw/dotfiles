@@ -14,6 +14,7 @@ return {
         { '<leader>v', group = 'love2d', icon = { icon = '󱅻 ', color = 'yellow' } },
         { '<leader>o', group = 'obsidian', icon = { icon = '󰵅 ', color = 'purple' } },
         { '<leader>t', group = 'tools', icon = { icon = ' ', color = 'grey' } },
+        { '<leader>w', group = 'window' },
         { '<leader>F', group = 'format' },
         { '<leader>C', icon = { icon = '󰙵 ' } },
         { '<leader>/' },

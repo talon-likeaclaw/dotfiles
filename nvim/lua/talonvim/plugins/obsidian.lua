@@ -14,15 +14,15 @@ return {
 
   -- Custom key commands.
   keys = {
-    { '<leader>ob', ':ObsidianBacklinks<cr>', desc = 'obsidian [b]acklinks' },
-    { '<leader>ol', ':ObsidianLink<cr>', desc = 'obsidian [l]ink selection' },
-    { '<leader>of', ':ObsidianFollowLink<cr>', desc = 'obsidian [f]ollow link' },
-    { '<leader>on', ':ObsidianNew<cr>', desc = 'obsidian [n]ew' },
-    { '<leader>os', ':ObsidianSearch<cr>', desc = 'obsidian [s]earch' },
-    { '<leader>oo', ':ObsidianQuickSwitch<cr>', desc = 'obsidian [o]pen quickswitch' },
-    { '<leader>oO', ':ObsidianOpen<cr>', desc = 'obsidian [O]pen in app' },
-    { '<leader>ok', ":!mv '%:p' ~/Documents/Obsidian/talons-brain/zettelkasten/", desc = '[o]bsidian [k]eep file' },
-    { '<leader>odd', ":!rm '%:p'<cr>:bd<cr>", desc = '[o]bsi[d]ian [d]elete' },
+    { '<leader>ob', ':ObsidianBacklinks<cr>', desc = 'backlinks' },
+    { '<leader>ol', ':ObsidianLink<cr>', desc = 'link selection' },
+    { '<leader>of', ':ObsidianFollowLink<cr>', desc = 'follow link' },
+    { '<leader>on', ':ObsidianNew<cr>', desc = 'new' },
+    { '<leader>os', ':ObsidianSearch<cr>', desc = 'search' },
+    { '<leader>oo', ':ObsidianQuickSwitch<cr>', desc = 'open quickswitch' },
+    { '<leader>oO', ':ObsidianOpen<cr>', desc = 'open in app' },
+    { '<leader>ok', ":!mv '%:p' ~/Documents/Obsidian/talons-brain/zettelkasten/", desc = 'keep file' },
+    { '<leader>odd', ":!rm '%:p'<cr>:bd<cr>", desc = 'delete' },
   },
 
   -- Custom options begin here:

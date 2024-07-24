@@ -48,7 +48,7 @@ return {
           },
           diagnostics = {
             globals = { 'vim', 'love' },
-            disable = { 'missing-fields', 'incomplete-signature-doc', 'duplicate-set-field' },
+            disable = { 'missing-fields', 'incomplete-signature-doc', 'duplicate-set-field', 'lowercase-global' },
           },
           workspace = {
             library = vim.api.nvim_get_runtime_file('', true),

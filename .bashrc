@@ -1,4 +1,4 @@
-export PATH="$PATH:$HOME/Documents/Coding/Bash/bin/:$HOME/.local/bin"
+export PATH="$PATH:$HOME/Documents/Coding/Bash/bin/:$HOME/.local/bin:/opt/homebrew/bin"
 eval "$(zoxide init bash)"
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
@@ -125,8 +125,10 @@ alias can='bat'
 alias lg='lazygit'
 alias n='clear ; neofetch'
 alias jinit='mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false'
-alias ts='tmux ls'
 alias music='psql -h 192.168.0.140 -U talon-likeaclaw -d music_db'
 alias or='nvim ~/Documents/Obsidian/talons-brain/inbox/*.md'
+alias ts='tmux ls'
 alias tc="tmux a -t"
+alias tn="tmux new -s"
 alias size="du -sh"
+alias tk="tmux kill-session -t"
