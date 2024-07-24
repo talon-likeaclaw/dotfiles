@@ -38,7 +38,6 @@ return {
     mason_tool_installer.setup {
       ensure_installed = {
         -- you can turn off/on auto_update per tool
-        -- you can turn off/on auto_update per tool
         { 'bash-language-server' },
         { 'lua-language-server' },
         { 'vim-language-server' },

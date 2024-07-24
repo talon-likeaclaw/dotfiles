@@ -3,6 +3,7 @@ return {
   event = { 'BufReadPre', 'BufNewFile' },
   dependencies = {
     'hrsh7th/cmp-nvim-lsp',
+    'S1M0N38/love2d.nvim',
   },
   config = function()
     local lspconfig = require 'lspconfig'
@@ -41,13 +42,43 @@ return {
       capabilities = capabilities,
       settings = {
         Lua = {
+          runtime = {
+            -- Tell the language server which version of Lua you're using (most likely LuaJIT for LÖVE)
+            version = 'LuaJIT',
+          },
           diagnostics = {
-            globals = { 'vim' },
+            globals = { 'vim', 'love' },
+            disable = { 'missing-fields', 'incomplete-signature-doc', 'duplicate-set-field' },
+          },
+          workspace = {
+            library = vim.api.nvim_get_runtime_file('', true),
+            checkThirdParty = false, -- Disable third-party checking
+          },
+          telemetry = {
+            enable = false,
           },
         },
       },
-    }
+      on_init = function(client)
+        local path = client.workspace_folders[1].name
+        if not vim.loop.fs_stat(path .. '/.luarc.json') and not vim.loop.fs_stat(path .. '/.luarc.jsonc') then
+          client.config.settings = vim.tbl_deep_extend('force', client.config.settings, {
+            Lua = {
+              runtime = {
+                -- Setup your lua path
+                path = vim.split(package.path, ';'),
+              },
+              workspace = {
+                library = { vim.env.VIMRUNTIME },
+              },
+            },
+          })
 
+          client.notify('workspace/didChangeConfiguration', { settings = client.config.settings })
+        end
+        return true
+      end,
+    }
     -- CSS LS
     lspconfig.cssls.setup {
       capabilities = capabilities,

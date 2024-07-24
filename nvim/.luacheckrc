@@ -1,11 +1,13 @@
 -- Global objects
 globals = {
-  "_",
-  "vim",
+  '_',
+  'vim',
+  'love',
 }
 
 ignore = {
-  "631",  -- max_line_length
+  '631', -- max_line_length
+  '211',
 }
 
 -- Rerun tests only if their modification time changed.

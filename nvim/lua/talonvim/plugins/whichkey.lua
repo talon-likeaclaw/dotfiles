@@ -14,8 +14,11 @@ return {
         { '<leader>o', group = 'obsidian', icon = { icon = '󰵅 ', color = 'purple' } },
         { '<leader>t', group = 'tools', icon = { icon = ' ', color = 'grey' } },
         { '<leader>F', group = 'format' },
-        { '<leader>C', group = 'config', icon = { icon = '󰙵 ' } },
-        { '<leader>q', group = 'quit buffer' },
+        { '<leader>C', icon = { icon = '󰙵 ' } },
+        { '<leader>/' },
+        { '<leader> ' },
+        { '<leader>q' },
+        { '<leader>Q' },
       },
     },
     win = {
