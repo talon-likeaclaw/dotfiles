@@ -11,6 +11,7 @@ return {
         { '<leader>b', group = 'bufferline', icon = { icon = '󰈔', color = 'orange' } },
         { '<leader>c', group = 'code', icon = { icon = ' ', color = 'azure' } },
         { '<leader>f', group = 'find', icon = { icon = '"', color = 'cyan' } },
+        { '<leader>v', group = 'love2d', icon = { icon = '󱅻 ', color = 'yellow' } },
         { '<leader>o', group = 'obsidian', icon = { icon = '󰵅 ', color = 'purple' } },
         { '<leader>t', group = 'tools', icon = { icon = ' ', color = 'grey' } },
         { '<leader>F', group = 'format' },
