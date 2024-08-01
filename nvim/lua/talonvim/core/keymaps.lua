@@ -1,4 +1,5 @@
 vim.g.mapleader = ' '
+vim.g.maplocalleader = ','
 local map = vim.keymap.set
 local api = vim.api.nvim_set_keymap
 local conform = require 'talonvim.plugins.lsp.formatting'
@@ -20,17 +21,27 @@ map({ 'n', 'v' }, '<leader>cf', function()
   }
 end, { desc = 'format' })
 
+-- Hard Mode (No arrow keys)
+map('n', '<Up>', '<Nop>', { noremap = true, silent = true })
+map('n', '<Down>', '<Nop>', { noremap = true, silent = true })
+map('n', '<Left>', '<Nop>', { noremap = true, silent = true })
+map('n', '<Right>', '<Nop>', { noremap = true, silent = true })
+map('i', '<Up>', '<Nop>', { noremap = true, silent = true })
+map('i', '<Down>', '<Nop>', { noremap = true, silent = true })
+map('i', '<Left>', '<Nop>', { noremap = true, silent = true })
+map('i', '<Right>', '<Nop>', { noremap = true, silent = true })
+
 -- Windows
 map('n', '<leader>w-', '<cmd>sp<CR>', { desc = 'split across', remap = true })
 map('n', '<leader>w|', '<cmd>vs<CR>', { desc = 'split down', remap = true })
 map('n', '<leader>wt', '<cmd>vs|terminal<CR>i', { desc = 'terminal', remap = true })
 map('t', '<C-x>', '<C-\\><C-n><cmd>q<CR>', { noremap = true, silent = true })
-map('t', '<C-h>', '<cmd>wincmd h<cr>', { desc = 'Go to Left Window' })
 
 -- Tools
 map('n', '<leader>tl', ':Lazy<CR>', { desc = 'lazy', noremap = true, silent = true })
 map('n', '<leader>tm', ':Mason<CR>', { desc = 'mason', noremap = true, silent = true })
 map('n', '<leader>to', ':Gen<CR>', { desc = 'ollama', noremap = true, silent = true })
+api('n', '<leader>tn', ':Neotree<CR>', { desc = 'close others', noremap = true, silent = true })
 
 -- =======================
 -- Plugin Specific Keymaps
@@ -42,7 +53,7 @@ api('n', '<S-h>', ':BufferLineCyclePrev<CR>', { noremap = true, silent = true })
 api('n', '<leader>bh', ':BufferLineCloseLeft<CR>', { desc = 'close left', noremap = true, silent = true })
 api('n', '<leader>bl', ':BufferLineCloseRight<CR>', { desc = 'close right', noremap = true, silent = true })
 api('n', '<leader>bo', ':BufferLineCloseOthers<CR>', { desc = 'close others', noremap = true, silent = true })
-map('n', '<leader>bb', '<cmd>enew<cr>', { desc = 'create new file' })
+map('n', '<leader>bn', '<cmd>tabnew<cr>', { desc = 'new empty tab' })
 
 -- Oil
 map('n', '-', '<CMD>Oil<CR>', { desc = 'open parent directory' })

@@ -21,7 +21,11 @@ return {
     { '<leader>os', ':ObsidianSearch<cr>', desc = 'search' },
     { '<leader>oo', ':ObsidianQuickSwitch<cr>', desc = 'open quickswitch' },
     { '<leader>oO', ':ObsidianOpen<cr>', desc = 'open in app' },
-    { '<leader>ok', ":!mv '%:p' ~/Documents/Obsidian/talons-brain/zettelkasten/", desc = 'keep file' },
+    {
+      '<leader>ok',
+      ":execute 'silent !mv ' . shellescape(expand('%:p')) . ' ~/Documents/Obsidian/talons-brain/zettelkasten/' | :bdelete! | :echo 'File moved successfully'<CR>",
+      desc = 'keep file',
+    },
     { '<leader>odd', ":!rm '%:p'<cr>:bd<cr>", desc = 'delete' },
   },
 

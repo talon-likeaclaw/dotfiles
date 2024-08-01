@@ -2,8 +2,8 @@ return {
   {
     'David-Kunz/gen.nvim',
     opts = {
-      model = 'deepseek-coder-v2',
-      host = '192.168.0.243',
+      model = 'mistral-nemo:latest',
+      host = '127.0.0.1',
       port = '11434',
       quit_map = 'q',
       retry_map = '<c-r>',
@@ -14,7 +14,7 @@ return {
         local body = { model = options.model, stream = true }
         return 'curl --silent --no-buffer -X POST http://' .. options.host .. ':' .. options.port .. '/api/chat -d $body'
       end,
-      display_mode = 'splits',
+      display_mode = 'split',
       show_prompt = true,
       show_model = true,
       no_auto_close = true,
