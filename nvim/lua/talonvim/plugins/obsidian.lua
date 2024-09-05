@@ -23,7 +23,7 @@ return {
     { '<leader>oO', ':ObsidianOpen<cr>', desc = 'open in app' },
     {
       '<leader>ok',
-      ":execute 'silent !mv ' . shellescape(expand('%:p')) . ' ~/Documents/Obsidian/talons-brain/zettelkasten/' | :bdelete! | :echo 'File moved successfully'<CR>",
+      ":execute 'silent !mv ' . shellescape(expand('%:p')) . '~/documents/obsidian/talons-brain/' | :bdelete! | :echo 'File moved successfully'<CR>",
       desc = 'keep file',
     },
     { '<leader>odd', ":!rm '%:p'<cr>:bd<cr>", desc = 'delete' },
@@ -34,7 +34,7 @@ return {
     workspaces = {
       {
         name = 'talons-brain',
-        path = '~/Documents/Obsidian/talons-brain',
+        path = '~/documents/obsidian/talons-brain',
       },
     },
     completion = {

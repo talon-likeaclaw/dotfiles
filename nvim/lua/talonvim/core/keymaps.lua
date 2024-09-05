@@ -46,14 +46,6 @@ api('n', '<leader>tn', ':Neotree<CR>', { desc = 'neotree', noremap = true, silen
 -- Plugin Specific Keymaps
 -- =======================
 
--- Bufferline
-api('n', '<S-l>', ':BufferLineCycleNext<CR>', { noremap = true, silent = true })
-api('n', '<S-h>', ':BufferLineCyclePrev<CR>', { noremap = true, silent = true })
-api('n', '<leader>bh', ':BufferLineCloseLeft<CR>', { desc = 'close left', noremap = true, silent = true })
-api('n', '<leader>bl', ':BufferLineCloseRight<CR>', { desc = 'close right', noremap = true, silent = true })
-api('n', '<leader>bo', ':BufferLineCloseOthers<CR>', { desc = 'close others', noremap = true, silent = true })
-map('n', '<leader>bn', '<cmd>tabnew<cr>', { desc = 'new empty tab' })
-
 -- Oil
 map('n', '-', '<CMD>Oil<CR>', { desc = 'open parent directory' })
 
