@@ -1,7 +1,6 @@
 # Export paths
-export PATH="$PATH:$HOME/.local/bin:/opt/homebrew/bin"
+export PATH="$PATH:$HOME/.local/bin"
 export ZSH="$HOME/.oh-my-zsh"
-export EDITOR="/opt/homebrew/bin/nvim"
 
 # Zsh History
 HISTSIZE=1000
@@ -54,7 +53,7 @@ alias can='bat'
 alias lg='lazygit'
 alias n='clear ; neofetch'
 alias music='psql -h 192.168.0.140 -U talon-likeaclaw -d music_db'
-alias or='nvim ~/Documents/Obsidian/talons-brain/inbox/*.md'
+alias or='nvim ~/documents/obsidian/talons-brain/inbox/*.md'
 alias size="du -sh"
 alias td='tmux detach'
 alias tn='tmux new-session -s '
@@ -72,5 +71,3 @@ eval "$(zoxide init zsh)"
 # Clear screen and run neofetch at the end
 clear
 neofetch
-
-source /home/talon/.config/broot/launcher/bash/br
