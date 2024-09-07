@@ -61,6 +61,9 @@ alias tn='tmux new-session -s '
 alias ta='tmux attach -t '
 alias tl='tmux list-sessions'
 alias tk='tmux kill-session -t '
+alias v='neovide'
+alias r='ranger'
+alias obs='export QT_QPA_PLATFORM=xcb && obs'
 
 # Intialize tools
 eval "$(starship init zsh)"
@@ -69,3 +72,5 @@ eval "$(zoxide init zsh)"
 # Clear screen and run neofetch at the end
 clear
 neofetch
+
+source /home/talon/.config/broot/launcher/bash/br
