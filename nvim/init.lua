@@ -8,3 +8,4 @@ if vim.g.neovide then
   vim.g.neovide_refresh_rate_idle = 5
 end
 require 'talonvim.core'
+vim.cmd [[colorscheme tokyonight]]
