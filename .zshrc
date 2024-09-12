@@ -30,7 +30,7 @@ plugins=(
 ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_AUTOCONNECT=true
 ZSH_TMUX_AUTOQUIT=false
-ZSH_TMUX_DEFAULT_SESSION_NAME="main"
+ZSH_TMUX_DEFAULT_SESSION_NAME="mainframe"
 
 # Configure eza
 zstyle ':omz:plugins:eza' dirs-first 'yes'
