@@ -10,7 +10,7 @@ end
 -- Settings
 config.color_scheme = "Tokyo Night"
 config.window_decorations = "NONE"
-config.window_background_opacity = 0.94
+config.window_background_opacity = 1.0
 config.hide_tab_bar_if_only_one_tab = true
 config.font = wezterm.font_with_fallback({
 	{ family = "JetBrainsMono Nerd Font", scale = 1.1 },
@@ -20,10 +20,10 @@ config.scrollback_lines = 3000
 config.use_fancy_tab_bar = false
 config.audible_bell = "Disabled"
 config.window_padding = {
-	left = 25,
-	right = 25,
-	top = 25,
-	bottom = 25,
+	left = 15,
+	right = 15,
+	top = 15,
+	bottom = 15,
 }
 
 -- Keys
