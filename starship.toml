@@ -15,6 +15,12 @@ disabled = true
 [line_break]
 disabled = true
 
+[docker_context]
+disabled = true
+
+[container]
+disabled = true
+
 [custom.coding_dir]
 when = """ test "$PWD" = "$HOME/Coding" """
 command = """ echo "📁" """
@@ -22,3 +28,4 @@ format = "[$output]($style) "
 
 [lua]
 detect_folders = []
+
