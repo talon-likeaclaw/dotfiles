@@ -27,7 +27,7 @@ return {
         lualine_c = { 'filename' },
         lualine_x = { 'encoding', 'fileformat', 'filetype' },
         lualine_y = { 'progress' },
-        lualine_z = { "os.date('%H:%M:%S')" },
+        lualine_z = {},
       },
       inactive_sections = {
         lualine_a = {},

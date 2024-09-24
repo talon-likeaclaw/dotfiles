@@ -50,6 +50,7 @@ source $ZSH/oh-my-zsh.sh
 alias c='clear'
 alias cat='bat -p'
 alias can='bat'
+alias code='cd /mnt/e/Code/'
 alias lg='lazygit'
 alias n='clear ; neofetch'
 alias music='psql -h 192.168.0.140 -U talon-likeaclaw -d music_db'

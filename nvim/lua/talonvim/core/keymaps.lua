@@ -33,14 +33,13 @@ map('i', '<Right>', '<Nop>', { noremap = true, silent = true })
 -- Windows
 map('n', '<leader>w-', '<cmd>sp<CR>', { desc = 'split across', remap = true })
 map('n', '<leader>w|', '<cmd>vs<CR>', { desc = 'split down', remap = true })
-map('n', '<leader>wt', '<cmd>vs|terminal<CR>i', { desc = 'terminal', remap = true })
-map('t', '<C-x>', '<C-\\><C-n><cmd>q<CR>', { noremap = true, silent = true })
 
 -- Tools
 map('n', '<leader>tl', ':Lazy<CR>', { desc = 'lazy', noremap = true, silent = true })
 map('n', '<leader>tm', ':Mason<CR>', { desc = 'mason', noremap = true, silent = true })
 map('n', '<leader>to', ':Gen<CR>', { desc = 'ollama', noremap = true, silent = true })
 api('n', '<leader>tn', ':Neotree<CR>', { desc = 'neotree', noremap = true, silent = true })
+map('n', '<leader>tu', "<cmd>lua require('undotree').toggle()<cr>", { desc = 'undotree', noremap = true, silent = true })
 
 -- =======================
 -- Plugin Specific Keymaps
